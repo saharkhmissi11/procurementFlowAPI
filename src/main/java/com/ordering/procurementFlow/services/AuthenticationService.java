@@ -108,6 +108,7 @@ public class AuthenticationService {
                     .accessToken("")
                     .refreshToken("")
                     .tfaEnabled(true)
+                    .role(user.getRole())   //
                     .build();
         }
         var jwtToken = jwtService.generateToken(user);
@@ -118,6 +119,7 @@ public class AuthenticationService {
                 .accessToken(jwtToken)
                 .refreshToken(refreshToken)
                 .tfaEnabled(false)
+                .role(user.getRole())   //
                 .build();
     }
 

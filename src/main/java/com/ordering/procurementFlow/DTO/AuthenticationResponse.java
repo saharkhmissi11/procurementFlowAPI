@@ -2,6 +2,7 @@ package com.ordering.procurementFlow.DTO;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ordering.procurementFlow.Models.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,4 +18,5 @@ public class AuthenticationResponse {
     private String refreshToken;
     private boolean tfaEnabled;
     private String secretImageUri;
+    private Role role;   //
 }
